@@ -15,7 +15,12 @@ namespace webpersonal.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var obj = new Persona()
+            {
+                Nombre = "Eduardo Natalio Pacompia Lopez",
+                Edad = 45
+           };
+            return View(obj);
         }
 
         public IActionResult Privacy()
