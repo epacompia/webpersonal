@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddTransient<IRepositorioProyectos,RepositorioProyectos>();
-
+builder.Services.AddTransient<IServicioEmail, ServicioEmailSendgrid>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
